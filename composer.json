@@ -9,8 +9,12 @@
       "email": "bastian@codename-php.de"
     }
   ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "require": {
-    "php": "^8.1"
+    "php": "^8.1",
+    "codenamephp/deployer.base": "dev-main",
+    "codenamephp/deployer.command": "dev-main"
   },
   "autoload": {
     "psr-4": {
@@ -34,7 +38,7 @@
     "psalm": "tools/psalm --threads=10 --long-progress",
     "composer-unused": "tools/composer-unused --no-progress --no-interaction --profile",
     "composer-require-checker": "tools/composer-require-checker --no-interaction",
-    "infection": "XDEBUG_MODE=coverage tools/infection --min-msi=95 --min-covered-msi=95 --threads=4 --no-progress --show-mutations",
+    "infection": "XDEBUG_MODE=coverage tools/infection --min-msi=100 --min-covered-msi=100 --threads=4 --no-progress --show-mutations",
     "ci-all": [
       "@phpunit",
       "@psalm",
