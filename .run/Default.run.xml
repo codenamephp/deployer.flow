@@ -4,12 +4,8 @@
       <settings>
         <option name="envFilePath" value="" />
         <option name="commandLineOptions" value="--build" />
-        <option name="services">
-          <list>
-            <option value="application" />
-          </list>
-        </option>
         <option name="sourceFilePath" value="docker-compose.yml" />
+        <option name="upForceRecreate" value="true" />
         <option name="upRemoveOrphans" value="true" />
       </settings>
     </deployment>
