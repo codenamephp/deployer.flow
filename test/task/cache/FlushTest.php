@@ -52,6 +52,6 @@ final class FlushTest extends TestCase {
   }
 
   public function testGetCommand() : void {
-    self::assertEquals('neos.flow:cache:flush', $this->sut->getCommand());
+    self::assertEquals('flow:cache:flush', $this->sut->getCommand());
   }
 }

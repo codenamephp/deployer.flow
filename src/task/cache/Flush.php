@@ -22,7 +22,7 @@ final class Flush extends AbstractFlowTask {
   }
 
   public function getCommand() : string {
-    return 'neos.flow:cache:flush';
+    return 'flow:cache:flush';
   }
 
   public function getArguments() : array {
