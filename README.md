@@ -8,8 +8,15 @@
 ![Packagist Downloads](https://img.shields.io/packagist/dt/codenamephp/deployer.flow)
 ![GitHub](https://img.shields.io/github/license/codenamephp/deployer.flow)
 
+## What is it?
+
+This package provides deployer task for the flow framework.
+
 ## Installation
 
 Easiest way is via composer. Just run `composer require codenamephp/deployer.flow` in your cli which should install the latest version for you.
 
 ## Usage
+
+Just use the provided tasks in your deployer file or extend the `\de\codenamephp\deployer\flow\task\AbstractFlowTask` and use the
+`\de\codenamephp\deployer\flow\command\factory\iFlowCommandFactory` to run commands.
