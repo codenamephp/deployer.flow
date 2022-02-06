@@ -18,5 +18,7 @@ Easiest way is via composer. Just run `composer require codenamephp/deployer.flo
 
 ## Usage
 
-Just use the provided tasks in your deployer file or extend the `\de\codenamephp\deployer\flow\task\AbstractFlowTask` and use the
+First you need to add the `flow:context` configuration to each host according to your context names.
+
+Then just use the provided tasks in your deployer file or extend the `\de\codenamephp\deployer\flow\task\AbstractFlowTask` and use the
 `\de\codenamephp\deployer\flow\command\factory\iFlowCommandFactory` to run commands.
