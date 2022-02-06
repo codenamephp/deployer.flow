@@ -2,7 +2,8 @@
 
 namespace de\codenamephp\deployer\flow\task;
 
-use de\codenamephp\deployer\base\task\iTask;
+use de\codenamephp\deployer\base\task\iTaskWithDescription;
+use de\codenamephp\deployer\base\task\iTaskWithName;
 use de\codenamephp\deployer\command\runner\iRunner;
 use de\codenamephp\deployer\command\runner\WithDeployerFunctions;
 use de\codenamephp\deployer\flow\command\factory\iFlowCommandFactory;
@@ -13,7 +14,7 @@ use de\codenamephp\deployer\flow\command\factory\WithBinaryFromDeployer;
  *
  * The flow command is created with the command factory using the command and arguments and run using the command runner
  */
-abstract class AbstractFlowTask implements iTask {
+abstract class AbstractFlowTask implements iTaskWithName, iTaskWithDescription {
 
   public function __construct(public iFlowCommandFactory $commandFactory = new WithBinaryFromDeployer(), public iRunner $commandRunner = new WithDeployerFunctions()) { }
 
