@@ -11,11 +11,21 @@ use de\codenamephp\deployer\flow\task\AbstractFlowTask;
  */
 final class Warmup extends AbstractFlowTask {
 
+  public const NAME = 'flow:cache:warmup';
+
   public function getCommand() : string {
     return 'cache:warmup';
   }
 
   public function getArguments() : array {
     return [];
+  }
+
+  public function getDescription() : string {
+    return 'Fills caches for the next request.';
+  }
+
+  public function getName() : string {
+    return self::NAME;
   }
 }

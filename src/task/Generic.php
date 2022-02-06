@@ -14,8 +14,10 @@ use de\codenamephp\deployer\flow\command\factory\WithBinaryFromDeployer;
 final class Generic extends AbstractFlowTask {
 
   public function __construct(public string       $command,
+                              public string       $taskName,
     /** @var array<int,string> */
                               public array        $arguments = [],
+                              public string       $taskDescription = '',
                               iFlowCommandFactory $commandFactory = new WithBinaryFromDeployer(),
                               iRunner             $commandRunner = new WithDeployerFunctions()) {
     parent::__construct($commandFactory, $commandRunner);
@@ -27,5 +29,13 @@ final class Generic extends AbstractFlowTask {
 
   public function getArguments() : array {
     return $this->arguments;
+  }
+
+  public function getDescription() : string {
+    return $this->taskDescription;
+  }
+
+  public function getName() : string {
+    return $this->taskName;
   }
 }

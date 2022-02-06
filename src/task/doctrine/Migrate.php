@@ -11,11 +11,21 @@ use de\codenamephp\deployer\flow\task\AbstractFlowTask;
  */
 final class Migrate extends AbstractFlowTask {
 
+  public const NAME = 'flow:doctrine:migrate';
+
   public function getCommand() : string {
     return 'doctrine:migrate';
   }
 
   public function getArguments() : array {
     return [];
+  }
+
+  public function getDescription() : string {
+    return 'Runs the doctrine database migrations';
+  }
+
+  public function getName() : string {
+    return self::NAME;
   }
 }

@@ -11,11 +11,21 @@ use de\codenamephp\deployer\flow\task\AbstractFlowTask;
  */
 final class Publish extends AbstractFlowTask {
 
+  public const NAME = 'flow:resource:publish';
+
   public function getCommand() : string {
     return 'resource:publish';
   }
 
   public function getArguments() : array {
     return [];
+  }
+
+  public function getDescription() : string {
+    return 'Publish the resources to the public directory.';
+  }
+
+  public function getName() : string {
+    return self::NAME;
   }
 }

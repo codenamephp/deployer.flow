@@ -15,6 +15,8 @@ use de\codenamephp\deployer\flow\task\AbstractFlowTask;
  */
 final class Flush extends AbstractFlowTask {
 
+  public const NAME = 'flow:cache:flush';
+
   public function __construct(public bool         $force = false,
                               iFlowCommandFactory $commandFactory = new WithBinaryFromDeployer(),
                               iRunner             $commandRunner = new WithDeployerFunctions()) {
@@ -27,5 +29,13 @@ final class Flush extends AbstractFlowTask {
 
   public function getArguments() : array {
     return $this->force ? ['--force'] : [];
+  }
+
+  public function getDescription() : string {
+    return 'Flushes all configured caches.';
+  }
+
+  public function getName() : string {
+    return self::NAME;
   }
 }
