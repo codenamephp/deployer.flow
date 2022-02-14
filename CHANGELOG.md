@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/codenamephp/deployer.flow/tree/1.1.0) (2022-02-14)
+
+[Full Changelog](https://github.com/codenamephp/deployer.flow/compare/1.0.0...1.1.0)
+
+**Implemented enhancements:**
+
+- Added repair command [\#2](https://github.com/codenamephp/deployer.flow/pull/2) ([bastianschwarz](https://github.com/bastianschwarz))
+
 ## [1.0.0](https://github.com/codenamephp/deployer.flow/tree/1.0.0) (2022-02-06)
 
 [Full Changelog](https://github.com/codenamephp/deployer.flow/compare/18a6bb8fe38740b2d3b0a654119ed0076f96e1d7...1.0.0)
