@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Updated CI [\#4](https://github.com/codenamephp/deployer.flow/pull/4) ([bastianschwarz](https://github.com/bastianschwarz))
 - Update codenamephp/deployer.base requirement from ^1.0 to ^1.0 || ^2.0 [\#3](https://github.com/codenamephp/deployer.flow/pull/3) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.1.0](https://github.com/codenamephp/deployer.flow/tree/1.1.0) (2022-02-14)
