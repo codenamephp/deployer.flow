@@ -39,7 +39,7 @@ final class WithBinaryFromDeployer implements iFlowCommandFactory {
   public function build(string $command, array $arguments = [], array $envVars = [], bool $sudo = false, iRunConfiguration $runConfiguration = null) : iCommand {
     return new Command(
       (string) $this->deployer->get('flow:binary', '{{release_or_current_path}}/flow'),
-      [$command, ...$arguments],
+      array_merge([$command], $arguments),
       ['FLOW_CONTEXT' => (string) $this->deployer->get('flow:context', ''), ...$envVars],
       $sudo,
       $runConfiguration ?? new SimpleContainer());
