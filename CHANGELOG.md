@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Update workflows [\#7](https://github.com/codenamephp/deployer.flow/pull/7) ([bastianschwarz](https://github.com/bastianschwarz))
 - Update codenamephp/deployer.base requirement from ^1.0 || ^2.0 to ^1.0 || ^2.0 || ^3.0 [\#6](https://github.com/codenamephp/deployer.flow/pull/6) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump webdevops/php-dev from 8.1 to 8.2 in /docker/application [\#5](https://github.com/codenamephp/deployer.flow/pull/5) ([dependabot[bot]](https://github.com/apps/dependabot))
 
