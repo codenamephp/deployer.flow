@@ -7,9 +7,13 @@ use de\codenamephp\deployer\base\functions\iGet;
 use de\codenamephp\deployer\command\Command;
 use de\codenamephp\deployer\command\runConfiguration\SimpleContainer;
 use de\codenamephp\deployer\flow\command\factory\WithBinaryFromDeployer;
+use Mockery;
+use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use PHPUnit\Framework\TestCase;
 
 final class WithBinaryFromDeployerTest extends TestCase {
+
+  use MockeryPHPUnitIntegration;
 
   private WithBinaryFromDeployer $sut;
 
@@ -30,15 +34,9 @@ final class WithBinaryFromDeployerTest extends TestCase {
   public function testBuild() : void {
     $runConfig = new SimpleContainer(123);
 
-    $this->sut->deployer = $this->createMock(iGet::class);
-    $this->sut->deployer
-      ->expects(self::exactly(2))
-      ->method('get')
-      ->withConsecutive(
-        ['flow:binary', '{{release_or_current_path}}/flow'],
-        ['flow:context', '']
-      )
-      ->willReturnOnConsecutiveCalls('flow binary', 'flow context');
+    $this->sut->deployer = Mockery::mock(iGet::class);
+    $this->sut->deployer->allows('get')->once()->ordered()->with('flow:binary', '{{release_or_current_path}}/flow')->andReturn('flow binary');
+    $this->sut->deployer->allows('get')->once()->ordered()->with('flow:context', '')->andReturn('flow context');
 
     $command = $this->sut->build('flow command', ['--some', '-arg'], ['FLOW_CONTEXT' => 'some context', 'some' => 'arg'], true, $runConfig);
 
@@ -51,15 +49,9 @@ final class WithBinaryFromDeployerTest extends TestCase {
   }
 
   public function testBuild_withMinimalArguments() : void {
-    $this->sut->deployer = $this->createMock(iGet::class);
-    $this->sut->deployer
-      ->expects(self::exactly(2))
-      ->method('get')
-      ->withConsecutive(
-        ['flow:binary', '{{release_or_current_path}}/flow'],
-        ['flow:context', '']
-      )
-      ->willReturnOnConsecutiveCalls(null, null);
+    $this->sut->deployer = Mockery::mock(iGet::class);
+    $this->sut->deployer->allows('get')->once()->ordered()->with('flow:binary', '{{release_or_current_path}}/flow')->andReturn(null);
+    $this->sut->deployer->allows('get')->once()->ordered()->with('flow:context', '')->andReturn(null);
 
     $command = $this->sut->build('flow command');
 
