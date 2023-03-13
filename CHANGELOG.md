@@ -1,11 +1,12 @@
 # Changelog
 
-## [1.1.2](https://github.com/codenamephp/deployer.flow/tree/1.1.2) (2022-12-13)
+## [1.1.2](https://github.com/codenamephp/deployer.flow/tree/1.1.2) (2023-03-13)
 
 [Full Changelog](https://github.com/codenamephp/deployer.flow/compare/1.1.1...1.1.2)
 
 **Merged pull requests:**
 
+- Update codenamephp/deployer.base requirement from ^1.0 || ^2.0 to ^1.0 || ^2.0 || ^3.0 [\#6](https://github.com/codenamephp/deployer.flow/pull/6) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump webdevops/php-dev from 8.1 to 8.2 in /docker/application [\#5](https://github.com/codenamephp/deployer.flow/pull/5) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.1.1](https://github.com/codenamephp/deployer.flow/tree/1.1.1) (2022-07-31)
