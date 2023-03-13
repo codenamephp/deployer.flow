@@ -8,6 +8,7 @@ use de\codenamephp\deployer\flow\task\AbstractFlowTask;
  * Task to publish the resources to the public directory
  *
  * @see https://neos.readthedocs.io/en/stable/References/CommandReference.html#neos-flow-resource-publish
+ * @psalm-api
  */
 final class Publish extends AbstractFlowTask {
 

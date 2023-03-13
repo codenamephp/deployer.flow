@@ -12,6 +12,7 @@ use de\codenamephp\deployer\flow\task\AbstractFlowTask;
  * Task to flush the cache
  *
  * @see https://neos.readthedocs.io/en/stable/References/CommandReference.html#neos-flow-cache-flush
+ * @psalm-api
  */
 final class Flush extends AbstractFlowTask {
 

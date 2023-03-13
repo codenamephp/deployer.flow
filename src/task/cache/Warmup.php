@@ -8,6 +8,7 @@ use de\codenamephp\deployer\flow\task\AbstractFlowTask;
  * Flow command to warmup caches
  *
  * @see https://neos.readthedocs.io/en/stable/References/CommandReference.html#neos-flow-cache-warmup
+ * @psalm-api
  */
 final class Warmup extends AbstractFlowTask {
 

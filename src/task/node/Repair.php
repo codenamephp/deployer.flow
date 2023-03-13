@@ -12,6 +12,7 @@ use de\codenamephp\deployer\flow\task\AbstractFlowTask;
  * Command that runs the repair command to bring nodes up to date (add new properties, set defaults, ...), fix structure, remove orphans etc.
  *
  * @see https://neos.readthedocs.io/en/stable/References/CommandReference.html#neos-contentrepository-node-repair
+ * @psalm-api
  */
 final class Repair extends AbstractFlowTask {
 

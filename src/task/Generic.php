@@ -10,6 +10,8 @@ use de\codenamephp\deployer\flow\command\factory\WithBinaryFromDeployer;
 /**
  * A generic task that takes the command and arguments as constructor parameters. Can be used for custom commands or for testing. For commands that used
  * regularly you should create actual task classes
+ *
+ * @psalm-api
  */
 final class Generic extends AbstractFlowTask {
 

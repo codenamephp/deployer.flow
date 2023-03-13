@@ -8,6 +8,7 @@ use de\codenamephp\deployer\flow\task\AbstractFlowTask;
  * Runs the doctrine migrations
  *
  * @see https://neos.readthedocs.io/en/stable/References/CommandReference.html#neos-flow-doctrine-migrate
+ * @psalm-api
  */
 final class Migrate extends AbstractFlowTask {
 
