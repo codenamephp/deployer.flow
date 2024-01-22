@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.0](https://github.com/codenamephp/deployer.flow/tree/2.0.0) (2024-01-22)
+
+[Full Changelog](https://github.com/codenamephp/deployer.flow/compare/1.2.0...2.0.0)
+
+**Merged pull requests:**
+
+- Drop PHP 8.1 [\#10](https://github.com/codenamephp/deployer.flow/pull/10) ([bastianschwarz](https://github.com/bastianschwarz))
+
 ## [1.2.0](https://github.com/codenamephp/deployer.flow/tree/1.2.0) (2024-01-22)
 
 [Full Changelog](https://github.com/codenamephp/deployer.flow/compare/1.1.2...1.2.0)
